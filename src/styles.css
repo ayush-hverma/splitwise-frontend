@@ -1,0 +1,56 @@
+:root{
+	--bg: #f3f4f6;
+	--panel: #ffffff;
+	--muted: #6b7280;
+	--accent: #2563eb;
+	--card-shadow: 0 6px 20px rgba(16,24,40,0.08);
+}
+
+*{box-sizing:border-box}
+body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:var(--bg); color:#0f172a}
+
+/* Layout */
+main{flex:1}
+.card{background:var(--panel); border-radius:10px; box-shadow:var(--card-shadow); padding:12px}
+
+/* Sidebar */
+.sidebar{width:56px; background:transparent}
+
+/* Compact buttons */
+.btn-compact{display:flex;align-items:center;gap:10px;padding:8px;border-radius:8px;border:0;background:transparent;cursor:pointer}
+.btn-compact:hover{background:#f8fafc}
+.btn-compact.active{background:rgba(37,99,235,0.08);color:var(--accent)}
+
+/* Small utilities */
+.muted{color:var(--muted)}
+
+/* Cards & forms */
+input, textarea, select{font-family:inherit}
+
+/* Chat UI */
+.chat-head{position:fixed;right:20px;bottom:20px;display:flex;align-items:center;gap:8px;background:var(--accent);color:#fff;padding:10px 14px;border-radius:28px;box-shadow:0 10px 30px rgba(37,99,235,0.14);cursor:pointer;z-index:9999}
+.chat-head-icon{width:34px;height:34px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.12);border-radius:50%;font-size:16px}
+
+.chat-panel{position:fixed;right:20px;bottom:84px;width:320px;max-height:66vh;background:var(--panel);border-radius:12px;box-shadow:0 12px 36px rgba(2,6,23,0.12);display:flex;flex-direction:column;z-index:9999}
+.chat-panel-header{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-bottom:1px solid #eef2ff;font-weight:600}
+.chat-panel-body{padding:12px;overflow:auto;display:flex;flex-direction:column;gap:10px;background:#fbfbff}
+.chat-panel-input{display:flex;gap:8px;padding:10px;border-top:1px solid #f1f5f9}
+.chat-panel-input input{flex:1;padding:8px;border:1px solid #e6edf8;border-radius:8px;background:#fbfdff}
+
+.chat-msg{display:flex;gap:10px;align-items:flex-start}
+.chat-msg .avatar{width:36px;height:36px;border-radius:50%;background:#eef2ff;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+.chat-msg .bubble{max-width:220px;padding:10px 12px;border-radius:12px;background:#fff}
+.chat-user{flex-direction:row-reverse}
+.chat-user .bubble{background:#eef6ff}
+
+/* Utility small text */
+.small{font-size:12px;color:var(--muted)}
+
+/* Plan container styling */
+.plan{padding:14px;border-radius:12px;background:var(--panel);box-shadow:var(--card-shadow);border:1px solid rgba(2,6,23,0.04)}
+
+/* Form utilities */
+.chip{display:inline-flex;align-items:center;gap:8;padding:6px 10px;border-radius:999;background:#fff;box-shadow:0 6px 20px rgba(2,6,23,0.04)}
+.field-label{font-size:13px;color:var(--muted);margin-bottom:6px}
+.input{padding:8px;border-radius:8px;border:1px solid #e6edf8}
+.actions-row{display:flex;gap:8}
